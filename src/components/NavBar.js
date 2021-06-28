@@ -1,6 +1,4 @@
-/**
- * Nav bar component
- */
+// Todo, add scroll to position on page
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -9,8 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  NavbarText
+  NavLink
 } from 'reactstrap';
 
 const NavBarComponent = (props) => {
@@ -36,18 +33,11 @@ const NavBarComponent = (props) => {
               <NavLink href="/components/Experience">Experience</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/Education">Education</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink href="/components/Skills">Skills</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/Projects">Projects</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="/components/Contacts">Contacts</NavLink>
-            </NavItem>
-
           </Nav>
         </Collapse>
       </Navbar>
