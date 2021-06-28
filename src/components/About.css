@@ -1,11 +1,20 @@
 .content {
   display: inline-block;
-  /* clamp function not working (?) */
+  /* clamp function is not supported (?) */
+  line-height: 6vh;
   width: 45vw;
   max-width: 600px;
   min-width: 300px;
 }
-img {
-  height: 650px;
-  width: 650px;
+.illustration {
+  margin: 20px;
+  /* height: auto; This will overwrite margin*/ 
+  width: 100%;
+  max-width: 650px;
+}
+.contacts-icons {
+  /* display: inline; */
+  margin-right: 20px;
+  width: 36px;
+  height: auto;
 }
