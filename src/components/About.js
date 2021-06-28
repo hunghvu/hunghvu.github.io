@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './About.css';
+import './Util.css';
 import AboutImage from '../assets/about/1-illustration.svg';
 import EmailImage from '../assets/about/2-email.svg';
 import GitHubImage from '../assets/about/3-github.svg';
@@ -10,9 +11,9 @@ import LinkedInImage from '../assets/about/4-linkedin.svg';
 const AboutComponent = () => {
 
   return (
-    <div className="d-flex justify-content-around flex-wrap">
+    <div style={{backgroundColor:"#ffe5e3"}} className="d-flex justify-content-around flex-wrap">
       <div style={{ marginLeft: 20, marginTop: 40, display: 'inline-flex' }} className="flex-column">
-        <div className="element"><h1>Hi, I'm Hung Vu</h1></div>
+        <div className="animated-underline"><h1>Hi, I'm Hung Vu</h1></div>
         {/* Description */}
         <p className="content">I'm an aspiring software engineer with interest in both mobile and web platforms.
           I love using web technologies to deliver solutions to real-world problem! That's why I always try
@@ -78,7 +79,7 @@ const AboutComponent = () => {
           </Row>
         </Container>
       </div>
-      <img src={AboutImage} className="illustration" />
+      <img src={AboutImage} className="illustration" alt="Illustration of devices on different platfroms."/>
     </div>
   );
 }

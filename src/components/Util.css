@@ -1,0 +1,16 @@
+ /* Animated underline effect, credit to: https://codepen.io/parkinson/pen/xdPrJL */
+ .animated-underline {
+	display: inline-block;
+	padding-bottom: 3px;
+}
+.animated-underline:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	animation: underline 2s infinite;
+}
+@keyframes underline {
+  0% { width: 0%; background-color: #42ddf5;}
+  100% {width: 100%; background-color: transparent;}
+}
