@@ -12,8 +12,7 @@ const AboutComponent = () => {
   return (
     <div className="d-flex justify-content-around flex-wrap">
       <div style={{ marginLeft: 20, marginTop: 40, display: 'inline-flex' }} className="flex-column">
-        <h1>Hi, I'm Hung Vu</h1>
-
+        <div className="element"><h1>Hi, I'm Hung Vu</h1></div>
         {/* Description */}
         <p className="content">I'm an aspiring software engineer with interest in both mobile and web platforms.
           I love using web technologies to deliver solutions to real-world problem! That's why I always try
@@ -32,7 +31,7 @@ const AboutComponent = () => {
           </a>
         </div>
         {/* Education */}
-        <h2 style={{ marginTop: 60}}>Education</h2>
+        <h3 style={{ marginTop: 60}}>Education</h3>
         {/* Container default margin is 15 (?) */}
         <Container style={{marginLeft: -15}}>
           <Row>
@@ -79,7 +78,6 @@ const AboutComponent = () => {
           </Row>
         </Container>
       </div>
-
       <img src={AboutImage} className="illustration" />
     </div>
   );
