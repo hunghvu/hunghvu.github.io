@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import './About.css';
 import AboutImage from '../assets/about/1-illustration.svg';
 import EmailImage from '../assets/about/2-email.svg';
@@ -30,8 +31,55 @@ const AboutComponent = () => {
             <img src={EmailImage} className="contacts-icons" />
           </a>
         </div>
+        {/* Education */}
+        <h2 style={{ marginTop: 60}}>Education</h2>
+        {/* Container default margin is 15 (?) */}
+        <Container style={{marginLeft: -15}}>
+          <Row>
+            <Col>
+              <em><b style={{ lineHeight: 4 }}>University of Washington Tacoma</b></em>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>BS, Computer Science and Systems</p>
+            </Col>
+            <Col>
+              <p>06/2021</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>Magna Cum Laude, Dean’s List</p>
+            </Col>
+            <Col>
+              <p>GPA: 3.92</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <em><b style={{ lineHeight: 4 }}>South Seattle College</b></em>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>AS, Computer Science</p>
+            </Col>
+            <Col>
+              <p>06/2019</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>President’s List</p>
+            </Col>
+            <Col>
+              <p>GPA: 3.82</p>
+            </Col>
+          </Row>
+        </Container>
       </div>
-      
+
       <img src={AboutImage} className="illustration" />
     </div>
   );

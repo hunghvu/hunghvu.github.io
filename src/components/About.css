@@ -1,7 +1,8 @@
 .content {
   display: inline-block;
   /* clamp function is not supported (?) */
-  line-height: 6vh;
+  font-size: 19px;
+  line-height: 5vh;
   width: 45vw;
   max-width: 600px;
   min-width: 300px;
@@ -10,7 +11,7 @@
   margin: 20px;
   /* height: auto; This will overwrite margin*/ 
   width: 100%;
-  max-width: 650px;
+  max-width: 800px;
 }
 .contacts-icons {
   /* display: inline; */
