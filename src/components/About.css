@@ -1,12 +1,11 @@
 .content {
-  /* display: inline-block; */
+  display: inline-block;
   /* clamp function not working (?) */
   width: 45vw;
   max-width: 600px;
   min-width: 300px;
 }
 img {
-  /* margin: 20px; */
-  height: 50vh;
-  width: 50vw;
+  height: 650px;
+  width: 650px;
 }
