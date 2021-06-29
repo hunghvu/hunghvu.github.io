@@ -1,4 +1,11 @@
- /* Animated underline effect, credit to: https://codepen.io/parkinson/pen/xdPrJL */
+.icons {
+  /* display: inline; */
+  margin-right: 20px;
+  width: 48px;
+  height: auto;
+}
+
+/* Animated underline effect, credit to: https://codepen.io/parkinson/pen/xdPrJL */
  .animated-underline {
 	display: inline-block;
 	padding-bottom: 3px;

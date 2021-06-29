@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import './Skills.css';
+import './Utils.css';
 
 import JavaScriptLogo from '../assets/skills/languages/1-js-logo.svg';
 import HtmlLogo from '../assets/skills/languages/2-html-logo.svg';
@@ -36,103 +36,103 @@ const SkillsComponent = () => {
       <Container>
 
         <Row>
-          <Col>
+          <Col xl="3" lg="6">
             <h4>Languages</h4>
           </Col>
-          <Col>
-            <h4>Framework/Libraries</h4>
+          <Col xl="3" lg="6">
+            <h4>Frameworks/Libraries</h4>
           </Col>
-          <Col>
+          <Col xl="3" lg="6">
             <h4>Operating Systems</h4>
           </Col>
-          <Col>
-            <h4>Other Technologies</h4>
+          <Col xl="3" lg="6">
+            <h4>Other</h4>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col>
-            <img src={JavaScriptLogo} alt="JavaScript Logo" />
+            <img src={JavaScriptLogo} alt="JavaScript Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={ReactLogo} alt="React and React Native Logo" />
+            <img src={ReactLogo} alt="React and React Native Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={WindowsLogo} alt="WindowsLogo" />
+            <img src={WindowsLogo} alt="WindowsLogo" className="icons"/>
           </Col>
           <Col>
-            <img src={GitLogo} alt="Git version control system Logo" />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <img src={HtmlLogo} alt="HTML5 Logo" />
-          </Col>
-          <Col>
-            <img src={BootstrapLogo} alt="Bootstrap Logo" />
-          </Col>
-          <Col>
-            <img src={LinuxLogo} alt="Linux Logo" />
-          </Col>
-          <Col>
-            <img src={PostmanLogo} alt="Postman Logo" />
+            <img src={GitLogo} alt="Git version control system Logo" className="icons" style={{width: 96}}/>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col>
-            <img src={CssLogo} alt="CSS3 Logo" />
+            <img src={HtmlLogo} alt="HTML5 Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={JqueryLogo} alt="JQuery Logo" />
+            <img src={BootstrapLogo} alt="Bootstrap Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={AndroidLogo} alt="Android Logo" />
+            <img src={LinuxLogo} alt="Linux Logo" className="icons"/>
+          </Col>
+          <Col>
+            <img src={PostmanLogo} alt="Postman Logo" className="icons" style={{width: 128}}/>
+          </Col>
+        </Row>
+
+        <Row className="mb-3">
+          <Col>
+            <img src={CssLogo} alt="CSS3 Logo" className="icons"/>
+          </Col>
+          <Col>
+            <img src={JqueryLogo} alt="JQuery Logo" className="icons" style={{width: 96}}/>
+          </Col>
+          <Col>
+            <img src={AndroidLogo} alt="Android Logo" className="icons"/>
           </Col>
           <Col xs="3"></Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col>
-            <img src={JavaLogo} alt="Java Logo" />
+            <img src={JavaLogo} alt="Java Logo" className="icons"/>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col>
-            <img src={PostgreSqlLogo} alt="PostgreSQL Logo" />
+            <img src={PostgreSqlLogo} alt="PostgreSQL Logo" className="icons"/>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col className="text-center">
-            <em>With some experience in</em>
+            <h5>With some experience in</h5>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col xs="3">
-            <img src={PythonLogo} alt="Python Logo" />
+            <img src={PythonLogo} alt="Python Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={NodeJsLogo} alt="NodeJS Logo" />
+            <img src={NodeJsLogo} alt="NodeJS Logo" className="icons" style={{width: 96}}/>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-3">
           <Col xs="3">
-            <img src={CLogo} alt="C Logo" />
+            <img src={CLogo} alt="C Logo" className="icons"/>
           </Col>
           <Col>
-            <img src={ExpressLogo} alt="Express Logo" />
+            <img src={ExpressLogo} alt="Express Logo" className="icons" style={{width: 96}}/>
           </Col>
         </Row>
 
         <Row>
           <Col xs="3"></Col>
           <Col>
-            <img src={IonicLogo} alt="Ionic Logo" />
+            <img src={IonicLogo} alt="Ionic Logo" className="icons" style={{width: 96}}/>
           </Col>
         </Row>
       </Container>

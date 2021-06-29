@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './About.css';
-import './Util.css';
+import './Utils.css';
 import AboutImage from '../assets/about/1-illustration.svg';
 import EmailImage from '../assets/about/2-email.svg';
 import GitHubImage from '../assets/about/3-github.svg';
@@ -22,13 +22,13 @@ const AboutComponent = () => {
 
         <div>
           <a href="https://www.linkedin.com/in/hunghvu/">
-            <img src={LinkedInImage} className="contacts-icons" />
+            <img src={LinkedInImage} className="icons" />
           </a>
           <a href="https://github.com/hunghvu">
-            <img src={GitHubImage} className="contacts-icons" />
+            <img src={GitHubImage} className="icons" />
           </a>
           <a href="mailto:hunghvu2017@gmail.com">
-            <img src={EmailImage} className="contacts-icons" />
+            <img src={EmailImage} className="icons" />
           </a>
         </div>
         {/* Education */}
