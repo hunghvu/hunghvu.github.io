@@ -34,106 +34,55 @@ const SkillsComponent = () => {
         </div>
       </div>
       <Container>
-
         <Row>
-          <Col xl="3" lg="6">
-            <h4>Languages</h4>
-          </Col>
-          <Col xl="3" lg="6">
-            <h4>Frameworks/Libraries</h4>
-          </Col>
-          <Col xl="3" lg="6">
-            <h4>Operating Systems</h4>
-          </Col>
-          <Col xl="3" lg="6">
-            <h4>Other</h4>
-          </Col>
+        <Col xl="3" md="6" xs="12">
+          <Row className="mb-3"><h4>Languages</h4></Row>
+          <Row className="mb-3"><img src={JavaScriptLogo} alt="JavaScript Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={HtmlLogo} alt="HTML5 Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={CssLogo} alt="CSS3 Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={JavaLogo} alt="Java Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={PostgreSqlLogo} alt="PostgreSQL Logo" className="icons" /></Row>
+        </Col>
+
+        <Col xl="3" md="6" xs="12">
+          <Row className="mb-3"><h4>Frameworks/Libraries</h4></Row>
+          <Row className="mb-3"><img src={ReactLogo} alt="React and React Native Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={BootstrapLogo} alt="Bootstrap Logo" className="icons" /></Row>
+          <Row className="mb-3" style={{paddingTop:25}}><img src={JqueryLogo} alt="JQuery Logo" className="icons" style={{ width: 96 }} /></Row>
+        </Col>
+
+        <Col xl="3" md="6" xs="12">
+          <Row className="mb-3"><h4>Operating Systems</h4></Row>
+          <Row className="mb-3"><img src={WindowsLogo} alt="WindowsLogo" className="icons" /></Row>
+          <Row className="mb-3"><img src={LinuxLogo} alt="Linux Logo" className="icons" /></Row>
+          <Row className="mb-3"><img src={AndroidLogo} alt="Android Logo" className="icons" /></Row>
+        </Col>
+
+        <Col xl="3" md="6" xs="12">
+          <Row className="mb-3"><h4>Other</h4></Row>
+          <Row className="mb-3"><img src={GitLogo} alt="Git version control system Logo" className="icons" style={{ width: 96 }} /></Row>
+          <Row className="mb-3"><img src={PostmanLogo} alt="Postman Logo" className="icons" style={{ width: 128 }} /></Row>
+        </Col>
+        </Row>
+
+
+        <Row className="mb-3">
+          <Col className="text-center"><h5>With some experience in</h5></Col>
         </Row>
 
         <Row className="mb-3">
-          <Col>
-            <img src={JavaScriptLogo} alt="JavaScript Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={ReactLogo} alt="React and React Native Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={WindowsLogo} alt="WindowsLogo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={GitLogo} alt="Git version control system Logo" className="icons" style={{width: 96}}/>
-          </Col>
+          <Col xl="3" md="6" xs="12"><img src={PythonLogo} alt="Python Logo" className="icons" /></Col>
+          <Col ><img src={NodeJsLogo} alt="NodeJS Logo" className="icons" style={{ width: 96, paddingTop: 10 }} /></Col>
         </Row>
 
         <Row className="mb-3">
-          <Col>
-            <img src={HtmlLogo} alt="HTML5 Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={BootstrapLogo} alt="Bootstrap Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={LinuxLogo} alt="Linux Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={PostmanLogo} alt="Postman Logo" className="icons" style={{width: 128}}/>
-          </Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col>
-            <img src={CssLogo} alt="CSS3 Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={JqueryLogo} alt="JQuery Logo" className="icons" style={{width: 96}}/>
-          </Col>
-          <Col>
-            <img src={AndroidLogo} alt="Android Logo" className="icons"/>
-          </Col>
-          <Col xs="3"></Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col>
-            <img src={JavaLogo} alt="Java Logo" className="icons"/>
-          </Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col>
-            <img src={PostgreSqlLogo} alt="PostgreSQL Logo" className="icons"/>
-          </Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col className="text-center">
-            <h5>With some experience in</h5>
-          </Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col xs="3">
-            <img src={PythonLogo} alt="Python Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={NodeJsLogo} alt="NodeJS Logo" className="icons" style={{width: 96}}/>
-          </Col>
-        </Row>
-
-        <Row className="mb-3">
-          <Col xs="3">
-            <img src={CLogo} alt="C Logo" className="icons"/>
-          </Col>
-          <Col>
-            <img src={ExpressLogo} alt="Express Logo" className="icons" style={{width: 96}}/>
-          </Col>
+          <Col xl="3" md="6" xs="12"><img src={CLogo} alt="C Logo" className="icons" /></Col>
+          <Col ><img src={ExpressLogo} alt="Express Logo" className="icons" style={{ width: 96, paddingTop: 15 }} /></Col>
         </Row>
 
         <Row>
-          <Col xs="3"></Col>
-          <Col>
-            <img src={IonicLogo} alt="Ionic Logo" className="icons" style={{width: 96}}/>
-          </Col>
+          <Col xl="3" md="6" xs="12"></Col>
+          <Col ><img src={IonicLogo} alt="Ionic Logo" className="icons" style={{ width: 96, paddingTop: 5 }} /></Col>
         </Row>
       </Container>
     </div>
