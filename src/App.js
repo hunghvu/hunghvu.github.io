@@ -8,9 +8,9 @@ import SkillsComponent from './components/Skills';
 function App() {
   return (
     <>
-      <NavBarComponent/>
-      <AboutComponent/>
-      <ExperienceComponent/>
+      <NavBarComponent backgroundColor="#ffffff"/>
+      <AboutComponent backgroundColor="#fff3e0"/>
+      <ExperienceComponent backgroundColor="#ccc0ae"/>
       <SkillsComponent/>
     </>
   );

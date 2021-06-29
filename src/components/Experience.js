@@ -1,7 +1,8 @@
 import React from 'react';
 import { Chrono } from "react-chrono";
 
-const ExperienceComponent = () => {
+/* Receive props: backgroundColor */
+const ExperienceComponent = (props) => {
   const jobDescription = {
     "grader" : "Evaluated submissions in courses with more than 35 students each: Mobile Application Programming, " 
     + "and Fundamentals of Programming Language Concepts. "
@@ -17,13 +18,13 @@ const ExperienceComponent = () => {
   }];
 
   return (
-    <div style={{paddingTop: 80 }}>
+    <div style={{paddingTop: 80, backgroundColor: props.backgroundColor}}>
       <div className="d-flex justify-content-center">
         <div className="animated-underline">
           <h2> Experience</h2>
         </div>
       </div>
-      <div style={{ marginLeft: "4.5vw", width: "90vw" }}>
+      <div style={{ marginLeft: "4.5vw", paddingBottom: 140, width: "90vw" }}>
         <Chrono items={items} mode="VERTICAL" />
       </div>
 

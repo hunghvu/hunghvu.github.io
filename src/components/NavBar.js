@@ -1,4 +1,5 @@
 // Todo, add scroll to position on page
+/* Receive props: backgroundColor */
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -17,7 +18,7 @@ const NavBarComponent = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar style={{backgroundColor: props.backgroundColor}} light expand="md">
         <NavbarBrand href="/">Portfolio</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

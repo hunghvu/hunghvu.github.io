@@ -29,7 +29,7 @@ const SkillsComponent = () => {
 
   return (
     <div className="container-skills">
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center" style={{paddingBottom: 20}}>
         <div className="animated-underline">
           <h2>Skills</h2>
         </div>
@@ -84,7 +84,7 @@ const SkillsComponent = () => {
 
         <Row style={{paddingLeft: 105}}>
           <Col xl="3" md="6" xs="12" ></Col>
-          <Col ><img src={IonicLogo} alt="Ionic Logo" className="icons" style={{ width: 96, paddingTop: 5 }} /></Col>
+          <Col style={{paddingBottom: 20}}><img src={IonicLogo} alt="Ionic Logo" className="icons" style={{ width: 96, paddingTop: 5 }} /></Col>
         </Row>
       </Container>
 

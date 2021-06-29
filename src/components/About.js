@@ -7,11 +7,11 @@ import EmailImage from '../assets/about/2-email.svg';
 import GitHubImage from '../assets/about/3-github.svg';
 import LinkedInImage from '../assets/about/4-linkedin.svg';
 
-
-const AboutComponent = () => {
+/* Receive props: backgroundColor */
+const AboutComponent = (props) => {
 
   return (
-    <div style={{backgroundColor:"#ffe5e3"}} className="d-flex justify-content-around flex-wrap">
+    <div style={{backgroundColor: props.backgroundColor}} className="d-flex justify-content-around flex-wrap">
       <div style={{ marginLeft: 20, marginTop: 40, display: 'inline-flex' }} className="flex-column">
         <div className="animated-underline"><h1>Hi, I'm Hung Vu</h1></div>
         {/* Description */}
@@ -34,7 +34,7 @@ const AboutComponent = () => {
         {/* Education */}
         <h3 style={{ marginTop: 60}}>Education</h3>
         {/* Container default margin is 15 (?) */}
-        <Container style={{marginLeft: -15}}>
+        <Container style={{marginLeft: -15, paddingBottom: 120}}>
           <Row>
             <Col>
               <em><b style={{ lineHeight: 4 }}>University of Washington Tacoma</b></em>

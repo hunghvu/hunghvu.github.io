@@ -18,6 +18,6 @@
 	animation: underline 2s infinite;
 }
 @keyframes underline {
-  0% { width: 0%; background-color: #42ddf5;}
+  0% { width: 0%; background-color: #ba0861;}
   100% {width: 100%; background-color: transparent;}
 }
