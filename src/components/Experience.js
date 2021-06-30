@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chrono } from "react-chrono";
+import './Experience.css';
 
 /* Receive props: backgroundColor */
 const ExperienceComponent = (props) => {
@@ -18,7 +19,7 @@ const ExperienceComponent = (props) => {
   }];
 
   return (
-    <div style={{paddingTop: 80, backgroundColor: props.backgroundColor}}>
+    <div style={{backgroundColor: props.backgroundColor}} className="container-experience">
       <div className="d-flex justify-content-center">
         <div className="animated-underline">
           <h2> Experience</h2>

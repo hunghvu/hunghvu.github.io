@@ -1,0 +1,7 @@
+.container-experience {
+  background-image: url(../assets/experience/1-background.svg);
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+}
