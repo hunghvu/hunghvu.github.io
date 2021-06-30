@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col,
+  TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText,
   CardDeck, CardBody, CardImg, CardSubtitle
 } from 'reactstrap';
 import classnames from 'classnames';
@@ -9,6 +9,7 @@ import './Projects.css'
 import ArmageddonGif from '../assets/projects/2-armageddon.gif';
 import BulletHellGif from '../assets/projects/3-bullet-hell.gif';
 import McSandwichGif from '../assets/projects/4-mc-sandwich.gif';
+import ComChatGif from '../assets/projects/5-com-chat.gif';
 
 /* Receive props: backgroundColor */
 const ProjectsComponent = (props) => {
@@ -26,7 +27,7 @@ const ProjectsComponent = (props) => {
         </div>
       </div>
 
-      <div style={{ maxWidth: '50vw', margin: 'auto' }}>
+      <div style={{ maxWidth: '40vmax', margin: 'auto' }}>
         <Nav pills style={{ backgroundColor: 'white', paddingBottom: 10 }} className="justify-content-center">
           <NavItem>
             <NavLink onClick={() => { toggle('1'); }} className={classnames({ active: activeTab === '1' })}>JavaScript Games</NavLink>
@@ -47,7 +48,7 @@ const ProjectsComponent = (props) => {
           <TabPane tabId="1">
             <CardDeck>
               <Card>
-                <CardImg top height="210" src={ArmageddonGif} alt="8-bit Armageddon demo GIF" />
+                <CardImg top height="300" src={ArmageddonGif} alt="8-bit Armageddon demo GIF" />
                 <CardBody>
                   <CardTitle tag="h5" style={{ color: 'black' }}>8-bit-armageddon</CardTitle>
                   <CardSubtitle tag="em">JS | HTML | CSS <br/><br/></CardSubtitle>
@@ -55,27 +56,27 @@ const ProjectsComponent = (props) => {
                   {/* flex seems to make div float so buttons will not be responsive as card body */}
                   <Button href="https://github.com/hunghvu/8-bit-armageddon" style={{ marginRight: 15 }}>GitHub</Button>
                   <Button href="https://hunghvu.github.io/8-bit-armageddon/" style={{ marginRight: 15 }}>Live site</Button>
-                  <Button href="https://www.youtube.com/watch?v=vXzTd2H_wnQ">Youtube demo</Button>
+                  <Button href="https://www.youtube.com/watch?v=vXzTd2H_wnQ">Demo video</Button>
                 </CardBody>
               </Card>
 
               <Card>
-                <CardImg bottom height="210" src={BulletHellGif} alt="Bullet Hell demo Gif" />
+                <CardImg bottom height="300" src={BulletHellGif} alt="Bullet Hell demo GIF" />
                 <CardBody>
                   <CardTitle tag="h5" style={{ color: 'black' }}>Bullet Hell</CardTitle>
                   <CardSubtitle tag="em">JS | HTML | CSS <br/><br/></CardSubtitle>
-                  <CardText style={{ color: 'black', marginTop: 20 }}>A browser game of Bullet Hell genre based on Touhou franchise, built on JavaScript.</CardText>
+                  <CardText style={{ color: 'black', marginTop: 20 }}>A browser game of Bullet Hell genre based on Touhou franchise, built on JavaScript. <br/><br/></CardText>
                   <Button href="https://github.com/hunghvu/bullet-hell" style={{ marginRight: 15 }}>GitHub</Button>
                   <Button href="https://hunghvu.github.io/bullet-hell/">Live site</Button>
                 </CardBody>
               </Card>
             </CardDeck>
-
           </TabPane>
+
           <TabPane tabId="2">
             <CardDeck>
               <Card>
-                <CardImg top height="210" src={McSandwichGif} alt="McSandwich demo gif" />
+                <CardImg top height="300" src={McSandwichGif} alt="McSandwich demo GIF" />
                 <CardBody>
                   <CardTitle tag="h5" style={{ color: 'black' }}>McSandwich</CardTitle>
                   <CardSubtitle tag="em">
@@ -91,7 +92,27 @@ const ProjectsComponent = (props) => {
                   <Button href="https://hungvu-mcsandwich.herokuapp.com" style={{ marginRight: 15 }}>Live site</Button>
                 </CardBody>
               </Card>
+            </CardDeck>
+          </TabPane>
 
+          <TabPane tabId="3">
+            <CardDeck>
+              <Card>
+                <CardImg top height="300" src={ComChatGif} alt="Com Chat demo GIF" />
+                <CardBody>
+                  <CardTitle tag="h5" style={{ color: 'black' }}>Com Chat</CardTitle>
+                  <CardSubtitle tag="em">
+                    Frontend: Java | XML <br />
+                    Backend: Express.js | Node.js | PostgreSQL
+                  </CardSubtitle>
+                  <CardText style={{ color: 'black', marginTop: 20 }}>
+                    An Android chatting application, with features like Group and Direct Messaging, Weather Forecasting, Google Map and Friends Connection. <br/><br/>
+                  </CardText>
+                  {/* flex seems to make div float so buttons will not be responsive as card body */}
+                  <Button href="https://github.com/hunghvu/com-chat" style={{ marginRight: 15 }}>GitHub</Button>
+                  <Button href="https://youtu.be/5n2kLIX5d_M">Demo video</Button>
+                </CardBody>
+              </Card>
             </CardDeck>
           </TabPane>
         </TabContent>
