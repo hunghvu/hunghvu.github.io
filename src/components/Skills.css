@@ -1,10 +1,8 @@
 .container-skills {
   background-color: #ffffff;
   /* Negative margin not working (?) */
-  transform: translateY(-60px);
+  transform: translateY(-90px);
   border-radius: 25px;
-  border-style: solid;
-  border-width: thin;
   margin: auto;
   max-width: 65vw;
 }

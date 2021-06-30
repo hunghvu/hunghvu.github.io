@@ -22,13 +22,13 @@ const AboutComponent = (props) => {
 
         <div>
           <a href="https://www.linkedin.com/in/hunghvu/">
-            <img src={LinkedInImage} className="icons" />
+            <img src={LinkedInImage} className="icons" alt="LinkedIn icon" />
           </a>
           <a href="https://github.com/hunghvu">
-            <img src={GitHubImage} className="icons" />
+            <img src={GitHubImage} className="icons" alt="GitHub icon"/>
           </a>
           <a href="mailto:hunghvu2017@gmail.com">
-            <img src={EmailImage} className="icons" />
+            <img src={EmailImage} className="icons" alt="Gmail icon"/>
           </a>
         </div>
         {/* Education */}

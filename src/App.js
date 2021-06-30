@@ -4,14 +4,16 @@ import NavBarComponent from './components/NavBar';
 import AboutComponent from './components/About'
 import ExperienceComponent from './components/Experience';
 import SkillsComponent from './components/Skills';
+import ProjectsComponent from './components/Projects';
 
 function App() {
   return (
     <>
-      <NavBarComponent backgroundColor="#ffffff"/>
-      <AboutComponent backgroundColor="#fff3e0"/>
-      <ExperienceComponent backgroundColor="#ccc0ae"/>
-      <SkillsComponent/>
+      <NavBarComponent backgroundColor="#ccc0ae"/>
+      <AboutComponent backgroundColor="#fff3e0"/> {/* Primary color */}
+      <ExperienceComponent backgroundColor="#f9fbe7"/>
+      <SkillsComponent backgroundColor1="#ffffff" backgroundColor2="#fff3e0"/>
+      <ProjectsComponent backgroundColor="#fff3e0"/>
     </>
   );
 }
