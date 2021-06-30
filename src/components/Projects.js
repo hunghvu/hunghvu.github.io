@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import './Projects.css'
 import ArmageddonGif from '../assets/projects/2-armageddon.gif';
 import BulletHellGif from '../assets/projects/3-bullet-hell.gif';
+import McSandwichGif from '../assets/projects/4-mc-sandwich.gif';
 
 /* Receive props: backgroundColor */
 const ProjectsComponent = (props) => {
@@ -49,22 +50,22 @@ const ProjectsComponent = (props) => {
                 <CardImg top height="210" src={ArmageddonGif} alt="8-bit Armageddon demo GIF" />
                 <CardBody>
                   <CardTitle tag="h5" style={{ color: 'black' }}>8-bit-armageddon</CardTitle>
-                  <CardSubtitle tag="h6">JS | HTML | CSS</CardSubtitle>
+                  <CardSubtitle tag="em">JS | HTML | CSS <br/><br/></CardSubtitle>
                   <CardText style={{ color: 'black', marginTop: 20 }}>A 2D turn-based strategy browser game in JavaScript inspired by Worms, with a 8-bit aesthetic.</CardText>
                   {/* flex seems to make div float so buttons will not be responsive as card body */}
-                  <Button href="https://github.com/hunghvu/bullet-hell" style={{marginRight: 15}}>GitHub</Button>
-                  <Button href="https://hunghvu.github.io/bullet-hell/" style={{marginRight: 15}}>Live site</Button>
-                  <Button href="https://www.youtube.com/watch?v=vXzTd2H_wnQ">Youtube</Button>
+                  <Button href="https://github.com/hunghvu/8-bit-armageddon" style={{ marginRight: 15 }}>GitHub</Button>
+                  <Button href="https://hunghvu.github.io/8-bit-armageddon/" style={{ marginRight: 15 }}>Live site</Button>
+                  <Button href="https://www.youtube.com/watch?v=vXzTd2H_wnQ">Youtube demo</Button>
                 </CardBody>
               </Card>
 
               <Card>
-                <CardImg bottom height="210" src={BulletHellGif} alt="Card image cap" />
+                <CardImg bottom height="210" src={BulletHellGif} alt="Bullet Hell demo Gif" />
                 <CardBody>
                   <CardTitle tag="h5" style={{ color: 'black' }}>Bullet Hell</CardTitle>
-                  <CardSubtitle tag="h6">JS | HTML | CSS</CardSubtitle>
-                  <CardText style={{ color: 'black', marginTop: 20}}>A browser game of Bullet Hell genre based on Touhou franchise, built on JavaScript.</CardText>
-                  <Button href="https://github.com/hunghvu/bullet-hell" style={{marginRight: 15}}>GitHub</Button>
+                  <CardSubtitle tag="em">JS | HTML | CSS <br/><br/></CardSubtitle>
+                  <CardText style={{ color: 'black', marginTop: 20 }}>A browser game of Bullet Hell genre based on Touhou franchise, built on JavaScript.</CardText>
+                  <Button href="https://github.com/hunghvu/bullet-hell" style={{ marginRight: 15 }}>GitHub</Button>
                   <Button href="https://hunghvu.github.io/bullet-hell/">Live site</Button>
                 </CardBody>
               </Card>
@@ -72,22 +73,26 @@ const ProjectsComponent = (props) => {
 
           </TabPane>
           <TabPane tabId="2">
-            <Row>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-            </Row>
+            <CardDeck>
+              <Card>
+                <CardImg top height="210" src={McSandwichGif} alt="McSandwich demo gif" />
+                <CardBody>
+                  <CardTitle tag="h5" style={{ color: 'black' }}>McSandwich</CardTitle>
+                  <CardSubtitle tag="em">
+                    Frontend: JS | HTML | CSS | jQuery <br />
+                    Backend: Express.js | Node.js | PostgreSQL
+                  </CardSubtitle>
+                  <CardText style={{ color: 'black', marginTop: 20 }}>
+                    This is a sub sandwich restaurant website which has four main pages: Home, menu, Order and Cart page.
+                    The users can sign in and create a new account to order foods. The food options are customizable and orders will be saved to user account.
+                  </CardText>
+                  {/* flex seems to make div float so buttons will not be responsive as card body */}
+                  <Button href="https://github.com/hunghvu/mc-sandwich" style={{ marginRight: 15 }}>GitHub</Button>
+                  <Button href="https://hungvu-mcsandwich.herokuapp.com" style={{ marginRight: 15 }}>Live site</Button>
+                </CardBody>
+              </Card>
+
+            </CardDeck>
           </TabPane>
         </TabContent>
       </div>
