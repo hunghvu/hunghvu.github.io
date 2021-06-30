@@ -1,0 +1,7 @@
+.container-projects {
+  background-image: url(../assets/projects/1-background.svg);
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+}
