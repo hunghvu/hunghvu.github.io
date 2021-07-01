@@ -16,7 +16,7 @@ import {
  */
 const CardComponent = ({image, alt, title, subtitle, text, github, livesite, video}) => {
   return (
-    <Card>
+    <Card style={{borderRadius: 25}}>
       <CardImg bottom height="300" src={image} alt={alt} />
       <CardBody>
         <CardTitle tag="h5" style={{ color: 'black' }}>{title}</CardTitle>

@@ -3,7 +3,7 @@ import {
   TabContent, TabPane, Nav, NavItem, NavLink, CardDeck
 } from 'reactstrap';
 import classnames from 'classnames';
-
+import FooterComponent from './Footer';
 import './Projects.css'
 import ArmageddonGif from '../assets/projects/2-armageddon.gif';
 import BulletHellGif from '../assets/projects/3-bullet-hell.gif';
@@ -22,26 +22,31 @@ const ProjectsComponent = (props) => {
     if (activeTab !== tab) setActiveTab(tab);
   }
   return (
-    <div style={{ backgroundColor: props.backgroundColor, paddingBottom: 500 }} className="container-projects">
+    <div style={{ backgroundColor: props.backgroundColor }} className="container-projects">
       <div className="d-flex justify-content-center" style={{ paddingBottom: 20 }}>
         <div className="animated-underline">
           <h2>Projects</h2>
         </div>
       </div>
 
-      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25 }}>
-        <Nav pills style={{ paddingBottom: 10 }} className="justify-content-center">
+      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25, marginBottom: 200}}>
+        {/* Limit height of nav so when a chosen pill font size increase, it will not affect div size */}
+        <Nav pills style={{ paddingBottom: 10, minHeight: 64 }} className="justify-content-center">
           <NavItem>
-            <NavLink onClick={() => { toggle('1'); }} className={classnames({ active: activeTab === '1' })}>JavaScript Games</NavLink>
+            <NavLink style={activeTab === '1' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('1'); }} 
+            className={classnames({ active: activeTab === '1' })}>JavaScript Games</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => { toggle('2'); }} className={classnames({ active: activeTab === '2' })}>Full-stack Web App</NavLink>
+            <NavLink style={activeTab === '2' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('2'); }} 
+            className={classnames({ active: activeTab === '2' })}>Full-stack Web App</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => { toggle('3'); }} className={classnames({ active: activeTab === '3' })}>Android App</NavLink>
+            <NavLink style={activeTab === '3' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('3'); }} 
+            className={classnames({ active: activeTab === '3' })}>Android App</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => { toggle('4'); }} className={classnames({ active: activeTab === '4' })}>Other</NavLink>
+            <NavLink style={activeTab === '4' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('4'); }} 
+            className={classnames({ active: activeTab === '4' })}>Other</NavLink>
           </NavItem>
         </Nav>
 
@@ -127,7 +132,7 @@ const ProjectsComponent = (props) => {
         </TabContent>
       </div>
 
-
+      <FooterComponent/>
     </div>
   );
 }
