@@ -40,7 +40,8 @@ const ProjectsComponent = (props) => {
       </div>
 
       {/* Border radius in div will not be effective, must also be in navbar (?) */}
-      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25, marginBottom: 200 }}>
+      {/* Trade-off:  40vmax gives better consistency at 1080p (android tab is smaller due to image width at 65vmax), but 65vmax gives better responsivenss*/}
+      <div style={{ maxWidth: '65vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25, marginBottom: 200 }}>
         <Navbar color="light" light expand="md" style={{ borderTopLeftRadius: 25, borderTopRightRadius: 25 }} className="justify-content-center">
           <NavbarToggler onClick={navOpen} navbar />
           <Collapse isOpen={isOpen} navbar style={isOpen ? null : { marginTop: -8 }}>
@@ -83,7 +84,7 @@ const ProjectsComponent = (props) => {
                 alt="8-bit Armageddon demo GIF"
                 title="8-bit Armageddon"
                 subtitle={"JS | HTML | CSS \n "}
-                text="A 2D turn-based strategy browser game in JavaScript inspired by Worms, with a 8-bit aesthetic."
+                text={"A 2D turn-based strategy browser game in JavaScript inspired by Worms, with a 8-bit aesthetic. \n "}
                 github="https://github.com/hunghvu/8-bit-armageddon"
                 livesite="https://hunghvu.github.io/8-bit-armageddon/"
                 video="https://www.youtube.com/watch?v=vXzTd2H_wnQ"
@@ -108,8 +109,8 @@ const ProjectsComponent = (props) => {
                 alt="McSandwich demo GIF"
                 title="McSandwich"
                 subtitle={"Frontend: JS | HTML | CSS | jQuery \nBackend: Express.js | Node.js | PostgreSQL"}
-                text="This is a sub sandwich restaurant website which has four main pages: Home, menu, Order and Cart page.
-                The users can sign in and create a new account to order foods. The food options are customizable and orders will be saved to user account."
+                text={"This is a sub sandwich restaurant website which has four main pages: Home, menu, Order and Cart page. " + 
+                "The users can sign in and create a new account to order foods. The food options are customizable and orders will be saved to user account. \n "}
                 github="https://github.com/hunghvu/mc-sandwich"
                 livesite="https://hungvu-mcsandwich.herokuapp.com"
               />
@@ -123,7 +124,7 @@ const ProjectsComponent = (props) => {
                 alt="Com Chat demo GIF"
                 title="Com Chat"
                 subtitle={"Frontend: Java | XML. \nBackend: Express.js | Node.js | PostgreSQL"}
-                text={"An Android chatting application, with features like Group and Direct Messaging, Weather Forecasting, Google Map and Friends Connection. \n "}
+                text={"An Android chatting application, with features like Group and Direct Messaging, Weather Forecasting, Google Map and Friends Connection. \n \n "}
                 github="https://github.com/hunghvu/com-chat"
                 video="https://youtu.be/5n2kLIX5d_M"
               />
@@ -137,7 +138,7 @@ const ProjectsComponent = (props) => {
                 alt="Dynamic Wallpaper demo image"
                 title="Dynamic Wallpaper"
                 subtitle={"Java \n "}
-                text="A program allows users to automatically change wallpaper based on user's provided time throughout a day."
+                text={"A program allows users to automatically change wallpaper based on user's provided time throughout a day. \n "}
                 github="https://github.com/hunghvu/dynamic-wallpaper"
 
               />
@@ -147,7 +148,7 @@ const ProjectsComponent = (props) => {
                 alt="Tetris demo image"
                 title="Tetris"
                 subtitle={"Java \n "}
-                text="Designed and built a front end for Tetris game. The goal is to construct a GUI with a given backend codebase."
+                text={"Designed and built a front end for Tetris game. The goal is to construct a GUI with a given backend codebase. \n "}
                 github="https://github.com/hunghvu/TCSS305/tree/master/hungvu-tetris"
 
               />
