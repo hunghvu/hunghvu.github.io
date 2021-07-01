@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import {
-  TabContent, TabPane, Nav, NavItem, NavLink, CardDeck
+  TabContent, TabPane, Nav, NavItem, NavLink, CardDeck, NavbarToggler, Collapse, Navbar
 } from 'reactstrap';
-import classnames from 'classnames';
 import FooterComponent from './Footer';
 import './Projects.css'
 import ArmageddonGif from '../assets/projects/2-armageddon.gif';
@@ -21,6 +20,17 @@ const ProjectsComponent = (props) => {
   const toggle = tab => {
     if (activeTab !== tab) setActiveTab(tab);
   }
+
+  // To collapse nav
+  const [isOpen, setIsOpen] = useState(false);
+  const navOpen = () => setIsOpen(!isOpen);
+  let windowWidth;
+  const resetOpen = () => {
+    windowWidth = window.innerWidth;
+    if (windowWidth >= 768) setIsOpen(false);
+  }
+  window.addEventListener('resize', resetOpen);
+
   return (
     <div style={{ backgroundColor: props.backgroundColor }} className="container-projects">
       <div className="d-flex justify-content-center" style={{ paddingBottom: 20 }}>
@@ -29,26 +39,40 @@ const ProjectsComponent = (props) => {
         </div>
       </div>
 
-      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25, marginBottom: 200}}>
-        {/* Limit height of nav so when a chosen pill font size increase, it will not affect div size */}
-        <Nav pills style={{ paddingBottom: 10, minHeight: 64 }} className="justify-content-center">
-          <NavItem>
-            <NavLink style={activeTab === '1' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('1'); }} 
-            className={classnames({ active: activeTab === '1' })}>JavaScript Games</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink style={activeTab === '2' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('2'); }} 
-            className={classnames({ active: activeTab === '2' })}>Full-stack Web App</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink style={activeTab === '3' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('3'); }} 
-            className={classnames({ active: activeTab === '3' })}>Android App</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink style={activeTab === '4' ? {backgroundColor: props.backgroundColor, color: 'black', fontSize:20} : null} onClick={() => { toggle('4'); }} 
-            className={classnames({ active: activeTab === '4' })}>Other</NavLink>
-          </NavItem>
-        </Nav>
+      {/* Border radius in div will not be effective, must also be in navbar (?) */}
+      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25, marginBottom: 200 }}>
+        <Navbar color="light" light expand="md" style={{ borderTopLeftRadius: 25, borderTopRightRadius: 25 }} className="justify-content-center">
+          <NavbarToggler onClick={navOpen} navbar />
+          <Collapse isOpen={isOpen} navbar style={isOpen ? null : { marginTop: -8 }}>
+            {/* Limit height of nav so when a chosen pill font size increase, it will not affect div size */}
+            <Nav pills style={{ paddingBottom: 10, minHeight: 64 }} className="mx-auto">
+              <NavItem>
+                <NavLink
+                  style={activeTab === '1' ? { backgroundColor: props.backgroundColor, color: 'black', fontSize: 20 } : null}
+                  onClick={() => { toggle('1'); }}
+                  className={{ active: activeTab === '1' }}>JavaScript Games</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  style={activeTab === '2' ? { backgroundColor: props.backgroundColor, color: 'black', fontSize: 20 } : null}
+                  onClick={() => { toggle('2'); }}
+                  className={{ active: activeTab === '2' }}>Full-stack Web App</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  style={activeTab === '3' ? { backgroundColor: props.backgroundColor, color: 'black', fontSize: 20 } : null}
+                  onClick={() => { toggle('3'); }}
+                  className={{ active: activeTab === '3' }}>Android App</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  style={activeTab === '4' ? { backgroundColor: props.backgroundColor, color: 'black', fontSize: 20 } : null}
+                  onClick={() => { toggle('4'); }}
+                  className={{ active: activeTab === '4' }}>Other</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
 
         <TabContent activeTab={activeTab} className="d-flex justify-content-center">
           {/* For some reasons, card title and body are white by default */}
@@ -132,7 +156,7 @@ const ProjectsComponent = (props) => {
         </TabContent>
       </div>
 
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }
