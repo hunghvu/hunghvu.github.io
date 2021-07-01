@@ -7,7 +7,7 @@ const FooterComponent = () => {
   return (
 
     <div className="d-flex flex-column">
-      <div className="d-flex justify-content-center" style={{ paddingBottom: 50 }}>
+      <div className="d-flex justify-content-center" style={{ paddingBottom: 20 }}>
         <a href="https://www.linkedin.com/in/hunghvu/">
           <img src={LinkedInImage} className="icons" alt="LinkedIn icon" />
         </a>
@@ -18,7 +18,9 @@ const FooterComponent = () => {
           <img src={EmailImage} className="icons" alt="Gmail icon" />
         </a>
       </div>
-      <p className="d-flex justify-content-center" style={{ fontSize: 24 }}>&#169; 2021 Hung Huu Vu</p>
+      <p className="d-flex justify-content-center" style={{ fontSize: 12 }}>The icons used in this page belong to their respective owners and/or organizations.</p>
+      <p className="d-flex justify-content-center" style={{ fontSize: 12 }}>This page is only for personal and non-comercial use.</p>
+      <p className="d-flex justify-content-center" style={{ fontSize: 24 }}>&#169; 2021 Hung Huu Vu.</p>
     </div >
 
 
