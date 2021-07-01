@@ -30,8 +30,8 @@ const ProjectsComponent = (props) => {
         </div>
       </div>
 
-      <div style={{ maxWidth: '40vmax', margin: 'auto' }}>
-        <Nav pills style={{ backgroundColor: 'white', paddingBottom: 10 }} className="justify-content-center">
+      <div style={{ maxWidth: '40vmax', margin: 'auto', backgroundColor: 'white', borderRadius: 25 }}>
+        <Nav pills style={{ paddingBottom: 10 }} className="justify-content-center">
           <NavItem>
             <NavLink onClick={() => { toggle('1'); }} className={classnames({ active: activeTab === '1' })}>JavaScript Games</NavLink>
           </NavItem>
