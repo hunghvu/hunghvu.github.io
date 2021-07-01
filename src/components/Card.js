@@ -4,14 +4,14 @@ import {
 
 /**
  * 
- * @param {*} image 
- * @param {*} alt 
- * @param {*} title 
- * @param {*} subtitle 
- * @param {*} text 
- * @param {*} github 
- * @param {*} livesite 
- * @param {*} video 
+ * @param {*} image card image url
+ * @param {*} alt alt tag of image
+ * @param {*} title card title
+ * @param {*} subtitle card subtitle
+ * @param {*} text card text
+ * @param {*} github github url
+ * @param {*} livesite live site url
+ * @param {*} video demo video url
  * @returns 
  */
 const CardComponent = ({image, alt, title, subtitle, text, github, livesite, video}) => {

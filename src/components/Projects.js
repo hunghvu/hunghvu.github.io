@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
-  TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText,
-  CardDeck, CardBody, CardImg, CardSubtitle
+  TabContent, TabPane, Nav, NavItem, NavLink, CardDeck
 } from 'reactstrap';
 import classnames from 'classnames';
 
